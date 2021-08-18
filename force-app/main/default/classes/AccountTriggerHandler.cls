@@ -9,7 +9,14 @@ Modification Log :
 * Luis Oviedo                          1.0          Original Version
 *************************************************************************************/
 public class AccountTriggerHandler {
-    public void BeforeInsert(List<Account> lstAccount) {
+    
+      /**
+      * @Name          beforeInsert
+      * @Description   Before Insert for the trigger
+      * @Author        Luis Oviedo
+      */
+    
+    public void beforeInsert(List<Account> lstAccount) {
         List<Account> lstAccInsert = new List<Account>();
         for(Account a : lstAccount) {
             a.Name = a.Name + '_Test';

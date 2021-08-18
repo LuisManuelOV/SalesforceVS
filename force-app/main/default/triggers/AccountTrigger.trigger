@@ -12,8 +12,7 @@ trigger AccountTrigger on Account (before insert) {
     AccountTriggerHandler handler = new AccountTriggerHandler();
 
     /* Before Insert */
-    if(Trigger.isBefore){
-        handler.BeforeInsert(Trigger.new);
+    if((Trigger.isBefore) && (Trigger.isInsert)){
+        handler.beforeInsert(Trigger.new);
     }
-
 }
