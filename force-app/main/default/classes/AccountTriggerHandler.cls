@@ -17,11 +17,8 @@ public class AccountTriggerHandler {
       */
     
     public void beforeInsert(List<Account> lstAccount) {
-        List<Account> lstAccInsert = new List<Account>();
-        for(Account a : lstAccount) {
-            a.Name = a.Name + '_Test';
-            lstAccInsert.add(a);
+        for(Account a : lstAccount) {          
+            a.Name = a.Name + '_Test';       
         } 
-        INSERT lstAccInsert; 
     }
 }
