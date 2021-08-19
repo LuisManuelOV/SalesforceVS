@@ -17,7 +17,7 @@ trigger AccountTrigger on Account (before insert) {
       * @Author        Luis Oviedo
       */
 
-    if((Trigger.isBefore) && (Trigger.isInsert)){
+    if((Trigger.isBefore) && (Trigger.isInsert)) {
         handler.beforeInsert(Trigger.new);
     }
 }
