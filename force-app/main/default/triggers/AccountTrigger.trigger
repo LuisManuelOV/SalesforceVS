@@ -11,7 +11,12 @@ Modification Log :
 trigger AccountTrigger on Account (before insert) {
     AccountTriggerHandler handler = new AccountTriggerHandler();
 
-    /* Before Insert */
+      /**
+      * @Name          beforeInsert
+      * @Description   Account Before Insert
+      * @Author        Luis Oviedo
+      */
+
     if((Trigger.isBefore) && (Trigger.isInsert)){
         handler.beforeInsert(Trigger.new);
     }
