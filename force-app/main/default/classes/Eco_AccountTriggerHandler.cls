@@ -16,7 +16,7 @@ public with sharing class Eco_AccountTriggerHandler extends Eco_AbstractTriggerH
         Eco_BeforeInsert((List<Account>)Trigger.new);
     }
 
-    public override void afterInsert(){
+    public override void beforeUpdate(){
         if(!ranOnce) {
             Eco_BeforeUpdate((List<Account>)Trigger.new);
         }
@@ -24,27 +24,31 @@ public with sharing class Eco_AccountTriggerHandler extends Eco_AbstractTriggerH
 
     /**
     * @Name          function1
-    * @Description   
+    * @Description   Before Insert
     * @Author        Deloitte
     * @CreatedDate   2019-09-27
     * @Return        void
     */
-    public static void Eco_BeforeInsert(List<Account> newAccounts) {
-        for(Account a : newAccounts) {          
-            a.Name = a.Name + '_Test';       
-        } 
+    public static void Eco_BeforeInsert(List<Account> newAccountBF) {
+        if(newAccountBF.size() > 0){ 
+            for(Account a : newAccountBF) {          
+                a.Name = a.Name + '_Test';       
+            } 
+        }
     }
 
     /**
-    * @Name          function2
-    * @Description   
+    * @Name          Eco_BeforeUpdate
+    * @Description   Before Update
     * @Author        Deloitte
     * @CreatedDate   2020-02-28
     * @Return        void
     */
-    public static void Eco_BeforeUpdate(List<Account> newAccounts) {
-        for(Account a : newAccounts) {          
-            a.Name = a.Name + '_Test';       
-        } 
-    }
+    public static void Eco_BeforeUpdate(List<Account> newAccountBU) {
+        if(newAccountBU.size() > 0){ 
+            for(Account a : newAccountBU) {          
+                a.Name = a.Name + '_Test';       
+            } 
+        }
+    }    
 }
