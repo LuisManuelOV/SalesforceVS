@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Eco_AbstractTriggerHandler</members>
+        <members>Eco_TriggerConfig</members>
+        <members>Eco_TriggerFactory</members>
+        <members>Eco_TriggerFactoryTest</members>
+        <members>Eco_TriggerInterface</members>
+        <members>Eco_Triggers</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Eco_TriggerConfig.LogEventTrigger</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>Eco_TriggerConfig__mdt</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Eco_TriggerConfig__mdt-Trigger Config Layout</members>
+        <name>Layout</name>
+    </types>
+    <version>51.0</version>
+</Package>
